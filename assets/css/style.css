@@ -53,8 +53,7 @@ header li a {
     height: 200px;
     z-index: 0;
     background-image: url(../images/woodbackground.jpg);
-    background-size: cover
-    
+    background-size: cover;
 }
 
 section h2 {
