@@ -27,7 +27,7 @@ header h1 {
     min-width: 10%;
     color: var(--darkgreen);
     font-size: 250%;
-    padding: 10px;
+    padding: 5px;
     
 }
 
@@ -35,7 +35,6 @@ header li {
     position: relative;
     top: 10px;
     display: inline;
-    
 }
 
 header li a {
@@ -46,6 +45,11 @@ header li a {
     text-underline-offset: 4px;
 }
 
+header li a:hover{
+    transform: scale(1.15);
+    text-shadow: 1px 1px 7px var(--skyblue);
+}
+
 .hero-image{
     width: 100%;
     height: 200px;
@@ -53,11 +57,19 @@ header li a {
     background-image: url("../images/woodbackground.jpg");
     background-size: cover;
 }
+.portrait {
+    position: relative;
+    left: 80px;
+    top: 40px;
+    height: 100px;
+    filter: grayscale(40%);
+    border: 4px solid darkslategrey;
+}
 
 section h2 {
     position: relative;
     padding: 4px 4px 4px 4px;
-    top: 80%;
+    top: 25%;
     left: 83%;
     width: 16%;
     color: var(--darkgreen);
@@ -74,11 +86,12 @@ section h2 {
     height: 100%;
     width: 100%;
 }
+
 aside {
     padding: 8px 4px 10px 10px;
     text-align: right;
     width: 16%;
-    min-width: 200px;
+    min-width: 230px;
     color: var(--darkgreen);
     font-size: 35px;
     border-right: 3px solid var(--darkgreen);
@@ -98,7 +111,7 @@ aside {
     width: 100%;
 }
 
-.big-job {
+.horison-job {
     border: 3px solid var(--skyblue);
     height: 360px;
     margin-bottom: 15px;
@@ -107,14 +120,16 @@ aside {
     
 }
 
-.big-job::after {
-    content: "Name Here";
+.horison-job::after {
     background-color: var(--skyblue);
     color: var(--darkgreen);
     position: relative;
     bottom: 60px;
     font-size: 20px;
-    padding: 5px 5px 5px 5px;
+    padding: 1px 5px 5px 0px;
+    margin-top: 10px;
+    content: "Horiseon-Upgradation \A             html-css          ";
+    white-space: pre;
 }
 
 .small-job {
@@ -128,14 +143,35 @@ aside {
 
 }
 
-.small-job::after {
-    content: "Name Here";
+#job-2::after {
+    content: "Prework-Study";
     background-color: var(--skyblue);
     color: var(--darkgreen);
     position: relative;
-    top: 150px;
+    bottom: 50px;
     font-size: 20px;
     padding: 5px 5px 5px 5px;
+}
+
+#job-3::after {
+    content: "Portfolio-Assigment";
+    background-color: var(--skyblue);
+    color: var(--darkgreen);
+    position: relative;
+    bottom: 50px;
+    font-size: 20px;
+    padding: 5px 5px 5px 5px;
+}
+
+article section p a img{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    filter: grayscale(80%);
+}
+
+article section p a img:hover {
+    filter: grayscale(0%);
 }
 
 .contact-me {
@@ -152,13 +188,66 @@ aside {
     padding: 29px 32px 32px 32px;
 }
 
-article section p img{
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    filter: grayscale(60%);
+
+.contact-links:hover {
+    transform: scale(1.2);
+    text-shadow: -3px 2px 5px rgb(173, 176, 180);
 }
 
-article section p img:hover {
-    filter: grayscale(20%);
+@media screen and (max-width: 959px) {
+    section h2 {
+        top: 14%;
+    }
+
+    aside {
+        min-width: 150px;
+        font-size: 30px;
+    }
+
+    header nav ul li a {
+        font-size: 18px;
+    }
+
+    .small-job {
+        width: 95%;
+    }
+
+    .contact-links {
+        padding: 15px 15px 15px 15px;
+        font-size: 16px;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    section h2 {
+        top: 15%;
+        font-size: 12px;
+    }
+
+    aside {
+        min-width: 70px;
+        font-size: 16px;
+        
+    }
+    header h1 {
+        font-size: 24px;
+    }
+
+    header nav ul li a {
+        padding: 0px 6px 9px 6px;
+    }
+
+    .small-job {
+        height: 150px;
+        width: 91%;
+    }
+    
+    .contact-links {
+        font-size: 10px;
+        padding: 6px 6px 6px 6px;
+    }
+
+    .horison-job {
+        height: 250px;
+    }
 }
