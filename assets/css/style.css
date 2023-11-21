@@ -88,10 +88,9 @@ section h2 {
 }
 
 aside {
-    padding: 8px 4px 10px 10px;
+    padding: 8px 20px 10px 10px;
     text-align: right;
-    width: 16%;
-    min-width: 230px;
+    min-width: 20%;
     color: var(--darkgreen);
     font-size: 35px;
     border-right: 3px solid var(--darkgreen);
@@ -168,6 +167,7 @@ article section p a img{
     height: 100%;
     z-index: 0;
     filter: grayscale(80%);
+    object-fit: cover;
 }
 
 article section p a img:hover {
@@ -225,7 +225,7 @@ article section p a img:hover {
     }
 
     aside {
-        min-width: 70px;
+        min-width: 80px;
         font-size: 16px;
         
     }
@@ -250,4 +250,9 @@ article section p a img:hover {
     .horison-job {
         height: 250px;
     }
+
+    .text-article, .job-section, .contact-me {
+        margin-left: 2%;
+    }
+    
 }
