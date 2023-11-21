@@ -22,8 +22,8 @@ In this section I provide screenshots of My Portfolio WebSite.
 
 In this section I added links to the main project and to the GitHub repositorie with the codebase.
 
-Deployed aplication
+Deployed application
  https://mykhailozakh.github.io/Mykhailo-Portfolio/
 
-Project Repositorie
+Project Repository
  https://github.com/MykhailoZakh/Mykhailo-Portfolio
