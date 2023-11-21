@@ -1,12 +1,15 @@
+/* Root with colors */
 :root {
     --skyblue: rgb(142, 226, 199);
     --darkgreen: rgb(39, 48, 48);
 }
+/* Universal element */
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Body element */
 body{
     display: flex;
     flex-direction: column;
@@ -14,6 +17,7 @@ body{
     min-height: 100vh;
 }
 
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -21,6 +25,7 @@ body{
     background-color: var(--darkgreen);
 }
 
+/* Header's main name on the left side */
 header h1 {
     background-color: var(--skyblue);
     text-align: right;
@@ -31,12 +36,14 @@ header h1 {
     
 }
 
+/* Header's box with anchors items inside */
 header li {
     position: relative;
     top: 10px;
     display: inline;
 }
 
+/* Header's anchors */
 header li a {
     display: inline-block;
     color: var(--skyblue);
@@ -45,11 +52,13 @@ header li a {
     text-underline-offset: 4px;
 }
 
+/* Hover effect for header's anchors */
 header li a:hover{
     transform: scale(1.15);
     text-shadow: 1px 1px 7px var(--skyblue);
 }
 
+/* Backround image ubder header  */
 .hero-image{
     width: 100%;
     height: 200px;
@@ -57,6 +66,8 @@ header li a:hover{
     background-image: url("../images/woodbackground.jpg");
     background-size: cover;
 }
+
+/* My image inside the background image */
 .portrait {
     position: relative;
     left: 80px;
@@ -66,6 +77,7 @@ header li a:hover{
     border: 4px solid darkslategrey;
 }
 
+/* Subtitle on the right  corner */
 section h2 {
     position: relative;
     padding: 4px 4px 4px 4px;
@@ -77,6 +89,7 @@ section h2 {
     font-size: 20px;
 }
 
+/* Main class for all sections */
 .section-alligment {
     display: flex;
     flex-direction: row;
@@ -87,6 +100,7 @@ section h2 {
     width: 100%;
 }
 
+/* Aside paragraphs */
 aside {
     padding: 8px 20px 10px 10px;
     text-align: right;
@@ -96,13 +110,16 @@ aside {
     border-right: 3px solid var(--darkgreen);
 }
 
-.text-article{
+/* Class for text in About me article */
+.text-article {
+    line-height: 20px;
     margin-left:  4%;
     padding-top: 2%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
 }
 
+/* Main class for Work article */
 .job-section {
     display: block;
     justify-content: start;
@@ -110,6 +127,8 @@ aside {
     width: 100%;
 }
 
+
+/* class for Main Job's Box   */
 .horison-job {
     border: 3px solid var(--skyblue);
     height: 360px;
@@ -119,6 +138,7 @@ aside {
     
 }
 
+/* Main job box's name */
 .horison-job::after {
     background-color: var(--skyblue);
     color: var(--darkgreen);
@@ -131,6 +151,7 @@ aside {
     white-space: pre;
 }
 
+/* class for Small Job's Boxes */
 .small-job {
     flex-wrap: wrap;
     float: left;
@@ -142,6 +163,7 @@ aside {
 
 }
 
+/* Name box for first small job */
 #job-2::after {
     content: "Prework-Study";
     background-color: var(--skyblue);
@@ -152,6 +174,7 @@ aside {
     padding: 5px 5px 5px 5px;
 }
 
+/* Name box for second small job */
 #job-3::after {
     content: "Portfolio-Assigment";
     background-color: var(--skyblue);
@@ -162,6 +185,7 @@ aside {
     padding: 5px 5px 5px 5px;
 }
 
+/* images inside job's boxes */
 article section p a img{
     width: 100%;
     height: 100%;
@@ -170,14 +194,17 @@ article section p a img{
     object-fit: cover;
 }
 
+/* hover efect for images inside job's boxes */
 article section p a img:hover {
     filter: grayscale(0%);
 }
 
+/* Main class for Contact Me section */
 .contact-me {
     margin-left: 4%;
 }
 
+/* class for Anchor elements inside Contact Me section */
 .contact-links {
     display: inline-block;
     position: relative;
@@ -188,71 +215,104 @@ article section p a img:hover {
     padding: 29px 32px 32px 32px;
 }
 
-
+/* Hover effect for Anchor elements inside Contact Me section */
 .contact-links:hover {
     transform: scale(1.2);
     text-shadow: -3px 2px 5px rgb(173, 176, 180);
 }
 
+/* Responsive layout setings before 959px sreen size */
 @media screen and (max-width: 959px) {
+
+    /* Subtitle */
     section h2 {
         top: 14%;
     }
 
+    /* Aside paragraphs */
     aside {
         min-width: 150px;
         font-size: 30px;
     }
 
+    /* Header's Anchors */
     header nav ul li a {
         font-size: 18px;
     }
 
+    /* Small Job Boxes */
     .small-job {
         width: 95%;
     }
 
+    /* Contact Me Anchors */
     .contact-links {
-        padding: 15px 15px 15px 15px;
+        padding: 15px;
         font-size: 16px;
     }
     
 }
+
+/* Responsive layout setings before 768px sreen size */
 @media screen and (max-width: 768px) {
+    /* Subtitle */
     section h2 {
         top: 15%;
-        font-size: 12px;
+        font-size: 11px;
     }
 
+    /* Aside paragraphs */
     aside {
         min-width: 80px;
         font-size: 16px;
         
     }
+
+    /* Main Header Text */
     header h1 {
         font-size: 24px;
     }
 
+    /* Header's Anchors */
     header nav ul li a {
         padding: 0px 6px 9px 6px;
     }
 
+    /* Small Job Boxes */
     .small-job {
-        height: 150px;
-        width: 91%;
+        height: 100px;
+        width: 89%;
     }
     
+    /* Contact Me Anchors */
     .contact-links {
         font-size: 10px;
-        padding: 6px 6px 6px 6px;
+        padding: 6px;
     }
 
+    /* Main job box */
     .horison-job {
-        height: 250px;
+        height: 220px;
     }
 
+    /* Main articles */
     .text-article, .job-section, .contact-me {
         margin-left: 2%;
+        font-size: 14px;
     }
-    
+
+    /* Name box for main big job */
+    .horison-job::after{
+        font-size: 14px;
+    }
+
+    /* first job's name box */
+    #job-2::after{
+        font-size: 14px;
+    }
+
+    /* name box for second job */
+    #job-3::after{
+        font-size: 14px;
+    }
 }
